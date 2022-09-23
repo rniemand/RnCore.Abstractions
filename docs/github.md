@@ -1,0 +1,11 @@
+# GitHub
+
+## Secrets
+
+```text
+NUGET_API_KEY
+
+SONAR_PROJECT
+SONAR_HOST_URL
+SONAR_TOKEN
+```
