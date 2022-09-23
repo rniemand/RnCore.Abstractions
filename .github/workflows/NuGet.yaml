@@ -1,0 +1,24 @@
+name: NuGet
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Publish
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      # RnCore.Abstractions
+      - name: "Build: RnCore.Abstractions"
+        run: dotnet build -c Release src/RnCore.Abstractions/RnCore.Abstractions.csproj
+      - name: "Package: RnCore.Abstractions"
+        run: dotnet pack -c Release -o . src/RnCore.Abstractions/RnCore.Abstractions.csproj
+        
+      # Blindly publish everything :/
+      - name: Publish
+        run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
