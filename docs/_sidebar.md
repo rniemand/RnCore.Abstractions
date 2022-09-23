@@ -2,3 +2,8 @@
 - [CI-CD](./ci-cd.md)
 - [GitHub](./github.md)
 - [NuGet](./nuget.md)
+- **Abstractions**
+  - [DateTimeAbstraction](./core/DateTimeAbstraction.md)
+  - [DirectoryAbstraction](./core/DirectoryAbstraction.md)
+  - [FileAbstraction](./core/FileAbstraction.md)
+  - [PathAbstraction](./core/PathAbstraction.md)
