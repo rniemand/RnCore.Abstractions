@@ -4,6 +4,25 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ProjectGuid>FD48E13D-FEFA-4A2C-A798-D84FEB49531B</ProjectGuid>
+    <Company>Richard Niemand</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Richard Niemand</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Simple abstractions for my projects</Description>
+    <PackageProjectUrl>http://www.richardn.ca/RnCore.Abstractions/#/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/rniemand/RnCore.Abstractions</RepositoryUrl>
+    <AssemblyName>RnCore.Abstractions</AssemblyName>
+    <Version>6.0.0.100</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
