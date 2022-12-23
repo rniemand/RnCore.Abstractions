@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\RnCore.Abstractions\RnCore.Abstractions.csproj" />
     <ProjectReference Include="..\RnCore.Abstractions\RnCore.Abstractions.csproj" />
   </ItemGroup>
 
