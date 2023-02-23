@@ -5,6 +5,7 @@ namespace RnCore.Abstractions;
 
 public interface IFileAbstraction
 {
+  void Copy(string sourceFileName, string destFileName);
   bool Exists([NotNullWhen(true)] string? path);
   void Delete(string path);
   void WriteAllText(string path, string? contents);
@@ -22,6 +23,7 @@ public interface IFileAbstraction
 [ExcludeFromCodeCoverage]
 public class FileAbstraction : IFileAbstraction
 {
+  public void Copy(string sourceFileName, string destFileName) => File.Copy(sourceFileName, destFileName);
   public bool Exists(string? path) => File.Exists(path);
   public void Delete(string path) => File.Delete(path);
   public void WriteAllText(string path, string? contents) => File.WriteAllText(path, contents);

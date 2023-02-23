@@ -4,6 +4,7 @@ namespace RnCore.Abstractions;
 
 public interface IPathAbstraction
 {
+  string? GetDirectoryName(string? path);
   string GetFullPath(string path);
   string GetFullPath(string path, string basePath);
   string? GetFileName(string? path);
@@ -16,6 +17,7 @@ public interface IPathAbstraction
 [ExcludeFromCodeCoverage]
 public class PathAbstraction : IPathAbstraction
 {
+  public string? GetDirectoryName(string? path) => Path.GetDirectoryName(path);
   public string GetFullPath(string path) => Path.GetFullPath(path);
   public string GetFullPath(string path, string basePath) => Path.GetFullPath(path, basePath);
   public string? GetFileName(string? path) => Path.GetFileName(path);
